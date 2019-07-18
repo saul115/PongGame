@@ -25,9 +25,6 @@ public class PlayerMovement : MonoBehaviour
     {
 
 
-          
-
-            Debug.Log(Input.mousePosition);
 
              Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
