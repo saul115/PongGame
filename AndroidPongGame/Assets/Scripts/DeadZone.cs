@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.SceneManagement;
 
 public class DeadZone : MonoBehaviour
 {
@@ -15,6 +14,8 @@ public class DeadZone : MonoBehaviour
     int scoreEnemyQuantity;
 
     public SceneChanger sceneChanger;
+
+    public AudioSource pointAudio;
 
     private void OnTriggerEnter2D(Collider2D collisionBall)
     {
@@ -39,7 +40,12 @@ public class DeadZone : MonoBehaviour
 
         collisionBall.GetComponent<BallBehaviour>().gameStarted = false;
 
+        pointAudio.Play();
+
         CheckScore();
+
+
+
     }
 
 

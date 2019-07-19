@@ -14,6 +14,9 @@ public class BallBehaviour : MonoBehaviour
 
     float positionDifference = 0;
 
+
+    public AudioSource ballAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +40,11 @@ public class BallBehaviour : MonoBehaviour
 
         }
 
+    }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        ballAudio.Play();
     }
 }
