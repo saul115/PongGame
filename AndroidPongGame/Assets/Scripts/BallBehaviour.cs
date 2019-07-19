@@ -29,7 +29,7 @@ public class BallBehaviour : MonoBehaviour
 
             if(Input.GetMouseButtonDown(0))
             {
-                rbBall.velocity = new Vector2(8, 8);
+                rbBall.velocity = new Vector2(12, 12);
                 gameStarted = true;
             }
 
